@@ -239,7 +239,7 @@ function getArtistByIndex(array, id) {
   }
 }
 
-
+// done
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use get20s to do the following: 
@@ -250,18 +250,28 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
+// function get20s(array) {
+//   const bornDied20thCen = [];
+//   const yearsSplit = [];
+//   for(let i =0; i < array.length; i++){
+//     yearsSplit.push(number(array[i].years.split(' - '))) 
+//     if(yearsSplit[i].years >= 1900){
+//       bornDied20thCen.push({result: array[i]})
+//     }
+//   }
+//   return bornDied20thCen
+// }
+
 function get20s(array) {
-  const bornDied20thCen = [];
-  const yearsSplit = [];
-  for(let i =0; i < array.length; i++){
-    yearsSplit.push(parseInt(array[i].years.split(' - '))) 
-    if(yearsSplit[i].years >= 1900){
-      bornDied20thCen.push({result: array[i]})
+    const twentyCen = [];
+  for(let i =0; i <array.length; i++){
+
+    if(array[i].years.split(' - ') >= '1900'){
+      twentyCen.push(array[i].name)
     }
   }
-  return bornDied20thCen
+  return twentyCen
 }
-
 console.log(get20s(artists))
 
 //no
@@ -284,10 +294,10 @@ function removeArtist(array, id) {
   }
   return artists.length;
 }
-// console.log(removeArtist(artists, 0))
+console.log(removeArtist(artists, 0))
 console.log(artists.length)
 
-//no
+//done
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
@@ -349,13 +359,13 @@ For example artistInfo(artists, 'Frida Kahlo') will return:
 function artistInfo(array, name){
   for(let i = 0; i < array.length; i++){
     if(array[i].name === name){
-      return array[i].bio;
+      return [array[i].bio];
     }
   }
 }
-console.log(artistInfo(artists, 'Frida Kahlo'))
+// console.log(artistInfo(artists, 'Frida Kahlo'))
 
-//no
+// done
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 9: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use artistByCountry to do the following: 
