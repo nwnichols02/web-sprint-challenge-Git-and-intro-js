@@ -232,12 +232,12 @@ the artist at index {id} is {name}`
 Example, if getArtistByIndex is invoked with the artists array and the number 0, it will return `the artist at index 0 is Amedeo Modigliani` */
 
 function getArtistByIndex(array, id) {
-  for(let i =0; i < array.length; i++){
+  for(let i = 0; i < array.length; i++){
     if(array[i].id === id){
       return `the artist at index ${array[i].id} is ${array[i].name}`;
     }
   }
-}
+};
 
 // done
 
@@ -250,31 +250,19 @@ Example born in 1901 and died in 1959 - included -- born in 1889 and died in 192
 If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 // Hint - Look up the .split() method
 
-// function get20s(array) {
-//   const bornDied20thCen = [];
-//   const yearsSplit = [];
-//   for(let i =0; i < array.length; i++){
-//     yearsSplit.push(number(array[i].years.split(' - '))) 
-//     if(yearsSplit[i].years >= 1900){
-//       bornDied20thCen.push({result: array[i]})
-//     }
-//   }
-//   return bornDied20thCen
-// }
-
 function get20s(array) {
     const twentyCen = [];
   for(let i =0; i <array.length; i++){
 
     if(array[i].years.split(' - ') >= '1900'){
-      twentyCen.push(array[i].name)
+      twentyCen.push(array[i].name);
     }
   }
-  return twentyCen
-}
-console.log(get20s(artists))
+  return twentyCen;
+};
+console.log(get20s(artists));
 
-//no
+//done
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
@@ -294,8 +282,8 @@ function removeArtist(array, id) {
   }
   return artists.length;
 }
-console.log(removeArtist(artists, 0))
-console.log(artists.length)
+console.log(removeArtist(artists, 0));
+console.log(artists.length);
 
 //done
 
@@ -324,7 +312,7 @@ function addArtist(array) {
     nationality: 'American',
     bio: 'lorem ipsum',
   });
-  return array
+  return array;
 }
 
 //done
@@ -340,10 +328,10 @@ function lotsOfArt(array) {
   const lotsOfArt = [];
   for(let i=0; i < array.length; i++){
     if(array[i].paintings > 100){
-      lotsOfArt.push(array[i].name)
+      lotsOfArt.push(array[i].name);
     }
   }
-  return lotsOfArt
+  return lotsOfArt;
 }
 
 //done
@@ -380,10 +368,10 @@ function artistByCountry(array, nationality){
   const artistSameHome = [];
   for(let i=0; i <array.length; i++){
     if(array[i].nationality === nationality){
-      artistSameHome.push(array[i].name)
+      artistSameHome.push(array[i].name);
     }
   }
-  return artistSameHome
+  return artistSameHome;
 }
 //done
 
